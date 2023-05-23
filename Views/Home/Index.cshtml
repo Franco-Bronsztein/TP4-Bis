@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    @foreach (Pais item in ViewBag.ListaPaises)
+    {
+    <a href='@Url.Action("DetallePais",new { Pais = item.Nombre})'>
+        <img src="/Imagenes/@item.imgBandera">
+    </a>
+    }
+</div>
